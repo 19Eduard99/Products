@@ -1,0 +1,254 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header */
+.header {
+  padding: 40px 20px;
+
+  .title {
+    font-family: 'Helvetica Neue', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 150%;
+    margin-bottom: 20px;
+    color: #000000;
+  }
+
+  .description {
+    font-family: 'Helvetica Neue', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 150%;
+    color: #000000;
+  }
+}
+/* Header */
+
+/* Products */
+.product-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.product {
+  width: 300px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.img-container {
+  position: relative;
+  width: 100%;
+  height: 377px;
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+.img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  backface-visibility: hidden;
+  transition: transform 0.6s;
+  border-radius: 16px;
+}
+
+.img-front {
+  transform: rotateY(0deg);
+}
+
+.img-back {
+  transform: rotateY(180deg);
+}
+
+.img-container:hover .img-front {
+  transform: rotateY(180deg);
+}
+
+.img-container:hover .img-back {
+  transform: rotateY(0deg);
+}
+
+.product-title {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  color: #000000;
+}
+
+.product-description {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  color: #000000;
+}
+
+.prices {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-family: 'Helvetica Neue', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 150%;
+  color: #000000;
+}
+
+.compare-at-price {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  text-decoration-line: line-through;
+  color: #a3a3a3;
+}
+
+/* Products */
+
+/* FAQ */
+.faq {
+  padding: 120px 20px;
+}
+
+.faq-title {
+  width: 100%;
+}
+
+.faq-content {
+  width: 100%;
+}
+.faq-title h2 {
+  font-family: 'Helvetica Neue';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 150%;
+  color: #000000;
+  margin-bottom: 10px;
+}
+
+.faq-title p {
+  font-family: 'Helvetica Neue';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 150%;
+  color: #000000;
+}
+
+.faq-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.accordion-item {
+  margin-bottom: 10px;
+  transition: background 0.3s ease;
+  border-radius: 12px;
+}
+
+.accordion-item.active {
+  background: #d7ecec;
+}
+
+.accordion-item.active button {
+  background: #d7ecec;
+}
+
+.accordion-toggle {
+  font-family: 'Helvetica Neue';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 150%;
+
+  color: #000000;
+  cursor: pointer;
+  padding: 10px;
+  width: 100%;
+  border: none;
+  border-radius: 12px;
+  background-color: #f7f8fb;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  outline: none;
+}
+
+.accordion-toggle::after {
+  content: '';
+  background: url(../assets/images/plus-circle.svg)
+    no-repeat center center;
+  width: 26px;
+  height: 26px;
+  display: inline-block;
+  transition: transform 0.4s ease;
+}
+
+.accordion-item.active .accordion-toggle::after {
+  background: url(../assets/images/minus-circle.svg)
+    no-repeat center center;
+  transform: rotate(180deg);
+}
+
+.accordion-content {
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.4s ease-in-out;
+}
+
+.accordion-item.active .accordion-content {
+  height: auto;
+  opacity: 1;
+  padding: 10px;
+}
+/* FAQ */
+
+/* Media Queries */
+@media (max-width: 1024px) {
+  .faq-container {
+    flex-direction: column;
+    gap: 50px;
+  }
+}
+
+@media (max-width: 600px) {
+  .header {
+    .title {
+      font-size: 32px;
+    }
+
+    .description {
+      font-size: 14px;
+    }
+  }
+
+  .product {
+    width: 100%;
+  }
+
+  .img-container {
+    height: 294px;
+  }
+}
+/* Media Queries */

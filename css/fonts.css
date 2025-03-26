@@ -1,0 +1,64 @@
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: local('Helvetica Neue Thin'),
+    local('HelveticaNeue-Thin'),
+    url('../assets/fonts/HelveticaNeue-Thin.woff2')
+      format('woff2'),
+    url('../assets/fonts/HelveticaNeue-Thin.woff')
+      format('woff');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: local('Helvetica Neue Medium'),
+    local('HelveticaNeue-Medium'),
+    url('../assets/fonts/HelveticaNeue-Medium.woff2')
+      format('woff2'),
+    url('../assets/fonts/HelveticaNeue-Medium.woff')
+      format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: local('Helvetica Neue Roman'),
+    local('HelveticaNeue-Roman'),
+    url('../assets/fonts/HelveticaNeue-Roman.woff2')
+      format('woff2'),
+    url('../assets/fonts/HelveticaNeue-Roman.woff')
+      format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: local('Helvetica Neue Bold'),
+    local('HelveticaNeue-Bold'),
+    url('../assets/fonts/HelveticaNeue-Bold.woff2')
+      format('woff2'),
+    url('../assets/fonts/HelveticaNeue-Bold.woff')
+      format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: local('Helvetica Neue Light'),
+    local('HelveticaNeue-Light'),
+    url('../assets/fonts/HelveticaNeue-Light.woff2')
+      format('woff2'),
+    url('../assets/fonts/HelveticaNeue-Light.woff')
+      format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
