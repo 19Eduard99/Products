@@ -82,8 +82,6 @@ const renderProducts = async () => {
       ? compareAtPriceNode.amount
       : '';
 
-    console.log(compareAtPriceNode);
-
     const price = document.createElement('p');
 
     price.textContent =
